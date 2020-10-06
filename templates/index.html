@@ -1,0 +1,30 @@
+<h1>GhostPost</h1>
+<a href="newPost/">New Post</a>
+<a href="/">Home</a>
+<a href="boasts/">Boasts Zone</a>
+<a href="roasts/">Roasts Zone</a>
+<a href="filter">Filter by Votes</a>
+{% for post in all_posts %}
+<ul>
+    <li>
+        {{post.is_boast}}
+    </li>
+    <li>
+        {{post.content}}
+    </li>
+    <li>
+        {{post.up_votes}}
+        <a href="up_vote/{{post.id}}"><button>Thumbs Up</button></a>
+    </li>
+    <li>
+        {{post.down_votes}}
+        <a href="down_vote/{{post.id}}"><button>Thumbs Down</button></a>
+    </li>
+    <li>
+        {{post.posted_time}}
+    </li>
+    <li>
+        {{post.vote_score}}
+    </li>
+</ul>
+{% endfor %}

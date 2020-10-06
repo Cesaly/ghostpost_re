@@ -1,0 +1,23 @@
+<a href="/">Home</a>
+{% for post in boasts %}
+<ul>
+    <li>
+        {{post.is_boast}}
+    </li>
+    <li>
+        {{post.content}}
+    </li>
+    <li>
+        {{post.up_votes}}
+    </li>
+    <li>
+        {{post.down_votes}}
+    </li>
+    <li>
+        {{post.posted_time}}
+    </li>
+    <li>
+        {{post.vote_score}}
+    </li>
+</ul>
+{% endfor %}
